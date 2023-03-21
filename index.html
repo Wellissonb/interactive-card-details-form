@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+  <link rel="stylesheet" href="styles/mobile.css">
+  <link rel="stylesheet" href="styles/tablet.css">
+  <link rel="stylesheet" href="styles/desktop.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+  <main>
+
+    <section class="cards">
+      <div class="card1">
+        <p id="numbersOutput">0000  0000 0000 0000</p>
+        <div id="name-container">
+          <p id="nameOutput">Jane Appleseed</p>
+          <p id="expDataOutput">00/00</p>
+        </div>
+      </div>
+      <div class="card2">
+        <p id="cvcOutput">000</p>
+      </div>
+    </section>
+
+    <section class="credentials">
+      <form action="" method="post" autocomplete="off">
+        <div class="nameCard">
+          <label for="cardName">Cardholder Name</label>
+          <input type="text" name="cardName" id="cardName" placeholder="e.g. Jane Appleseed" class="mainInfo">
+        </div>
+        <div class="cardNumber-container">
+          <label for="cardNumber">Card Number</label>
+          <input type="text" name="cardNumber" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" class="mainInfo" maxlength="18">
+        </div>
+        <div class="data-container">
+          <div class="expData-container">
+            <label for="expData">Exp. Date (MM/YY)</label>
+            <div class="alignDate">
+              <input type="number" name="expDate1" class="date" id="expDate1" placeholder="MM"  max="2">
+              <input type="number" name="expDate1" class="date" id="expDate2" placeholder="YY" max="2">
+            </div>
+          </div>
+          <div class="cvc-container">
+            <label for="cvc">CVC</label>
+            <input type="number" name="cvc" id="cvc" placeholder="e.g. 123">
+          </div>
+        </div>
+        <div class="confirmButton">
+          <input type="submit" value="Confirm">
+        </div>
+      
+      </form>
+    </section>
+    <!-- Completed state start -->
+
+    <section class="thank-container">
+      <div class="checked-container">
+        <i class="fa-solid fa-check" id="checkedIcon"></i>
+      </div>
+
+      <p id="thanks">Thank you!</p>
+      <p id="details">We've added your card details</p>
+      <button>Continue</button>
+    </section>
+  </main>
+ 
+</body>
+</html>
