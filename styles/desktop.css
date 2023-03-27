@@ -42,17 +42,13 @@
         left: 30%;
         top: -10px;
         padding: 27px;
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.123);
     
     }
     
     .card2{
 
         top: 230px;
-        left: 50%;
-        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.123);
-
-    
+        left: 50%; 
     }
     
 
@@ -64,6 +60,7 @@
         width: 320px;
         height: 170px;
         background-size: cover;
+        box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.144);
     }
 
     @keyframes show{
