@@ -11,7 +11,6 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 
   <link rel="stylesheet" href="styles/mobile.css">
-  <link rel="stylesheet" href="styles/tablet.css">
   <link rel="stylesheet" href="styles/desktop.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -22,45 +21,56 @@
   <main>
 
     <section class="cards">
-      <article>
+      <div class="cards-container">
         <div class="card1">
           <p id="numbersOutput">0000  0000 0000 0000</p>
           <div id="name-container">
             <p id="nameOutput">Jane Appleseed</p>
-            <p id="expDataOutput">00/00</p>
+            <p id="expDataOutput"><span id="data1">00</span>/<span id="data2">00</span></p>
           </div>
         </div>
         <div class="card2">
           <p id="cvcOutput">000</p>
         </div>
-      </article>
+      </div>
     </section>
 
     <section class="credentials">
       <form action="" method="post" autocomplete="off">
-        <div class="nameCard">
+        <div class="nameCard spaceBottom">
           <label for="cardName">Cardholder Name</label>
           <input type="text" name="cardName" id="cardName" placeholder="e.g. Jane Appleseed" class="mainInfo">
+          <p class="msgError show-off""></p>
         </div>
-        <div class="cardNumber-container">
+        <div class="cardNumber-container spaceBottom">
           <label for="cardNumber">Card Number</label>
-          <input type="text" name="cardNumber" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" class="mainInfo" maxlength="18">
+          <input type="text" name="cardNumber" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" class="mainInfo" maxlength="19" minlength="19">
+          <p class="msgError show-off"></p>
         </div>
-        <div class="data-container">
-          <div class="expData-container">
+        <div class="data-container spaceBottom">
+          <div class="expData-container spaceBottom">
             <label for="expData">Exp. Date (MM/YY)</label>
-            <div class="alignDate">
-              <input type="number" name="expDate1" class="date" id="expDate1" placeholder="MM"  max="2">
-              <input type="number" name="expDate1" class="date" id="expDate2" placeholder="YY" max="2">
+            <div>
+              <div class="alignDate">
+              
+                  <input type="text" name="expDate1" class="date" id="expDate1" placeholder="MM" maxlength="2">
+                  <input type="text" name="expDate1" class="date" id="expDate2" placeholder="YY" maxlength="2">
+              
+              </div>
+              <p class="msgError show-off dataError"></p>
             </div>
+          
           </div>
           <div class="cvc-container">
             <label for="cvc">CVC</label>
-            <input type="number" name="cvc" id="cvc" placeholder="e.g. 123">
+            <div>
+              <input type="text" name="cvc" id="cvc" placeholder="e.g. 123" maxlength="3">
+              <p class="msgError show-off cvcP"></p>
+            </div>
           </div>
         </div>
         <div class="confirmButton">
-          <input type="submit" value="Confirm">
+          <input type="submit" value="Confirm" id="button">
         </div>
       
       </form>
@@ -77,6 +87,9 @@
       <button>Continue</button>
     </section>
   </main>
+
+  <script src="setCredentials.js"></script>
+  
  
 </body>
 </html>
