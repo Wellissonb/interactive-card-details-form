@@ -41,7 +41,7 @@
 
 
 .card1{
-    width: 290px;
+    width: 295px;
     height: 170px;
     background-image: url(../images/bg-card-front.png);
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@
 }
 
 .card2{
-    width: 290px;
+    width: 295px;
     height: 170px;
     background-image: url(../images/bg-card-back.png);
     background-size: cover;
@@ -190,7 +190,7 @@ input[type="number"]::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
 
-.alignDate{
+.alignDate1{
     display: flex;
     gap: 10px;
 }
